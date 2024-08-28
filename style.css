@@ -1,9 +1,7 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
 
 header {
     text-align: center;
@@ -17,23 +15,30 @@ header {
     height: 25px;
 }
 
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 75px;
+    padding: 0 20px;
 }
 
-
 #text-box {
-    width: 577px;
+    width: 100%;
+    max-width: 577px;
     height: 48px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+.presentacion__enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .presentacion__enlaces button {
@@ -43,24 +48,28 @@ main {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    width: 100%;
+    max-width: 150px;
 }
 
 .presentacion__enlaces button:first-child {
-    background-color: #0A3871; 
+    background-color: #0A3871;
     color: white;
 }
 
 .presentacion__enlaces button:nth-child(2) {
-    background-color: #D8DFE8; 
+    background-color: #D8DFE8;
     color: #0A3871;
 }
 
 .presentacion__enlaces button:last-child {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
 }
 
 #result-area {
+    width: 100%;
+    max-width: 600px;
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -76,4 +85,47 @@ main {
 #result-text {
     font-size: 18px;
     color: #333;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    main {
+        margin-top: 50px;
+    }
+
+    #text-box {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .presentacion__enlaces button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 5px 2px;
+    }
+
+    #result-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 30px;
+    }
+
+    #text-box {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .presentacion__enlaces button {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 3px 2px;
+    }
+
+    #result-text {
+        font-size: 14px;
+    }
 }
